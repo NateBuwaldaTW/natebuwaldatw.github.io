@@ -1,9 +1,14 @@
 <html>
 <body>
   <script>
+    const definitions = {
+        'Community': 'A community is...',
+        'DomainType': 'A domain type is...'
+    };
+    
     function showDefinition(key) {
       var definitionView = document.getElementById('definitions-view');
-      definitionView.textContent = key;
+      definitionView.textContent = `${key} - ${definitions[key]};
     }
   </script>
   <h1>Collibra Concepts</h1>
