@@ -2,8 +2,17 @@
 <body>
   <script>
     var definitions = {
-        'Community': 'A community is...',
-        'DomainType': 'A domain type is...'
+        'Community': 'A community is a grouping of subcommunities and domains. It often corresponds to functional divisions in a company and works best if it is aligned with governance organization.',
+        'DomainType': 'A domain type defines the semantics of a domain, as a kind of template. It defines which assets types users can create in the domain.',
+        'Domain': 'A domain is a logical grouping of assets and belongs to exactly one community. It has a domain type that specifies which asset types can be created in the domain. A domain has a unique name within its community. A domain is the instance of exactly one domain type.',
+        'Scope': 'A scope is a selection of communities and domains that you can assign to one or more asset types. In a scope, you can define amongst others a domain type, attribute types and relation types.',
+        'AssetType': 'An asset type defines the semantics of an asset, as a kind of template. It defines which attribute types and relation types the asset can have. Scopes are assigned to asset types.',
+        'Asset': 'An asset is the fundamental building block or resource for which you want to capture information. An asset belongs to exactly one domain and has a unique name within that domain. An asset is the instance of exactly one asset type.',
+        'AttributeType': 'An attribute type defines the class of information that an attribute contains. It is assigned to an asset type through a scope.',
+        'Attribute': 'An attribute is a specific piece of information that captures information about an asset. One asset can contain many attributes.', 
+        'RelationType': 'A relation type specifies the type of relation between two asset types. A relation type is bidirectional, going from a head asset type to a tail asset type and the other way around.', 
+        'Relation': 'A relation is a link between exactly two assets. It captures how two assets are related to each other. One asset can have many relations. A relation is the instance of exactly one relation type.',
+        'ComplexRelationType': 'A complex relation type specifies the characteristics of a complex relation instance. A complex relation is a type of relation that helps you to create many-to-many relations, as well as capture attributes (description, priority, ...) on top of the many-to-many relation. They can be regarded as objectified associations. A complex relation type is specified by its name, description, a collection of relation types and a collection of attribute types.'
     };
     
     function showDefinition(key) {
@@ -12,7 +21,10 @@
     }
   </script>
   <div id="definitions-view">
-      <div style="line-height: 17px;">
+      
+  </div>
+  <div>
+    <div style="line-height: 17px;">
   <div style="text-align: center; font-size: 200%; line-height: 200%; font-weight: 800; margin: 15px 15% 15px 15%;"><span style="color: #11856f;">Collibra Concepts</span></div>
   <div style="clear: both; padding-top: 10px;">
   </div>
@@ -20,25 +32,25 @@
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
             href="#" onclick="showDefinition('Community');">Community</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="#definitions-view" onclick="showDefinition('DomainType');">Domain Type</a></li>
+            href="#" onclick="showDefinition('DomainType');">Domain Type</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Domain</a></li>
+            href="#" onclick="showDefinition('Domain');">Domain</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Scope</a></li>
+            href="#" onclick="showDefinition('Scope');">Scope</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Asset Type</a></li>
+            href="#" onclick="showDefinition('AssetType');">Asset Type</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Asset</a></li>
+            href="#" onclick="showDefinition('Asset');">Asset</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Attribute Type</a></li>
+            href="#" onclick="showDefinition('AttributeType');">Attribute Type</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Attribute</a></li>
+            href="#" onclick="showDefinition('Attribute');">Attribute</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Relation Type</a></li>
+            href="#" onclick="showDefinition('RelationType');">Relation Type</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Relation</a></li>
+            href="#" onclick="showDefinition('Relation');">Relation</a></li>
         <li style="float: left; width: 45%; list-style-type: none; background: #ECEFF1; margin: 2.5%; padding: 5px; border-radius: 5px; text-align: center;"><a xml="lang"
-            href="https://docs.google.com/document/d/19CDCCHudvENFbMMDRHBjNxCxtogBv7cFLv8ISyMKde8/edit" target="_blank" rel="noopener">Complex Relation Type</a></li>
+            href="#" onclick="showDefinition('ComplexRelationType');">Complex Relation Type</a></li>
       </ul>
     </div>
   </div>
